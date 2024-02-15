@@ -38,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${roboto.className} mx-auto max-w-[1920px] bg-black`}>
+      <body className={`${inter.className} ${roboto.className} mx-auto max-w-[1920px] bg-gray-800`}>
         {children}
       </body>
     </html>
