@@ -41,7 +41,7 @@ export default async function Home() {
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 alt={movie.original_title}
                 fill
-                className="object-contain rounded-md border border-orange-500 "
+                className="object-cover rounded-md border border-orange-500 "
               />
             </div>
             <div className="flex flex-col justify-center mt-3 mb-10">
