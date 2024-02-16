@@ -41,10 +41,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} ${roboto.className} mx-auto max-w-[1920px] bg-[#212121]`}
       >
-        <div className="flex justify-center items-center bg-black w-full">
-
         <Navbar />
-        </div>
 
         {children}
       </body>
