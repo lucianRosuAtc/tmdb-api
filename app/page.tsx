@@ -11,7 +11,10 @@ type Movie = {
 
 const getMovie = async (): Promise<Movie[]> => {
   const res = await fetch(
-    `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.API_KEY}`
+    // `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.API_KEY}`
+
+`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`
+
   );
 
   if (!res.ok) {
@@ -21,6 +24,7 @@ const getMovie = async (): Promise<Movie[]> => {
   return data.results;
 };
 
+await new Promise((resolve) => setTimeout(resolve, 3000))
 export default async function Home() {
   const movies = await getMovie();
 
@@ -32,7 +36,7 @@ export default async function Home() {
       {(await getMovie()).map((movie) => (
         <div key={movie.id} className="text-white">
         
-          <div className="aspect-video relative">
+          <div className="aspect-square relative">
             <Image
               src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
               alt={movie.original_title}
