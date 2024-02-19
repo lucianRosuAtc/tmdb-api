@@ -203,13 +203,13 @@ const components: { title: string; href: string; description: string }[] = [
 
 export default function NavBar() {
   return (
-    <div className=" flex justify-center items-center gap-10 h-20 ">
+    <div className=" flex justify-center items-center gap-10 h-20">
       <NavigationMenu>
-        <NavigationMenuList>
+        <NavigationMenuList className="gap-10">
           <NavigationMenuItem>
-            <NavigationMenuTrigger>TMBD</NavigationMenuTrigger>
+            <NavigationMenuTrigger>The Movie Data Base</NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] ic">
+              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <a
@@ -231,7 +231,7 @@ export default function NavBar() {
                 <ListItem href="/learning" title="Learning">
                   Learning stuff about API and Next.js
                 </ListItem>
-                <ListItem href="/tv shows" title="Tv shows">
+                <ListItem href="/TV" title="Tv shows">
                   This link will take me to the Tv shows page
                 </ListItem>
                 <ListItem href="/docs/primitives/typography" title="More stuff">
@@ -241,7 +241,7 @@ export default function NavBar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>More Stuff</NavigationMenuTrigger>
+            <NavigationMenuTrigger>Learn More Stuff</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                 {components.map((component) => (
@@ -257,7 +257,7 @@ export default function NavBar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/docs" legacyBehavior passHref>
+            <Link href="https://developer.themoviedb.org/docs/image-basics" legacyBehavior passHref target="_blank">
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 TMBD Documentation
               </NavigationMenuLink>
