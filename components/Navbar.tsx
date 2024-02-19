@@ -232,7 +232,7 @@ export default function NavBar() {
                   Learning stuff about API and Next.js
                 </ListItem>
                 <ListItem href="/tv shows" title="Tv shows">
-                  this link will take me to the Tv shows page
+                  This link will take me to the Tv shows page
                 </ListItem>
                 <ListItem href="/docs/primitives/typography" title="More stuff">
                   I &apos;ll put more suff here later.

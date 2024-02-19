@@ -13,8 +13,13 @@ type Movie = {
 
 const getMovie = async (): Promise<Movie[]> => {
   const res = await fetch(
-    `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.API_KEY}`
-  );
+    // `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.API_KEY}`
+    // `https://api.themoviedb.org/3/trending/tv/day?api_key=${process.env.API_KEY}&media_type=tv&time_window=day`
+    // `https://api.themoviedb.org/3/discover/tv?api_key=${process.env.API_KEY}&append_to_response=videos,images`
+    `https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.API_KEY}&media_type=movie`
+
+    );
+    console.log(res)
 
   if (!res.ok) {
     throw new Error("Error fetching data");
@@ -23,7 +28,7 @@ const getMovie = async (): Promise<Movie[]> => {
   return data.results;
 };
 
-await new Promise((resolve) => setTimeout(resolve, 5000));
+await new Promise((resolve) => setTimeout(resolve, 1000));
 export default async function Home() {
   const movies = await getMovie();
   // console.log(movies)
@@ -40,7 +45,8 @@ export default async function Home() {
               <Image
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 alt={movie.original_title}
-                fill
+                width={400}
+                height={500}
                 className="object-cover rounded-md border border-orange-500 "
               />
             </div>

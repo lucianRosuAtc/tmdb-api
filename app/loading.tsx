@@ -10,16 +10,16 @@ export default function Loading() {
     {Array.from({length: 12}, (_, i) => i + 1).map((id) => (
       <div key={id} className="text-white">
       
-        <div className="aspect-square relative">
-            <Skeleton className="object-cover rounded-md border border-orange-500" />
+        <div className="aspect-square relative rounded-md bg-gray-600 border border-orange-500">
+            <Skeleton className="object-cover" />
         </div>
         <div className="flex flex-col justify-center mt-3 mb-10">
-              <Skeleton>Title: </Skeleton>
-              <Skeleton>Overview:</Skeleton>
-              <Skeleton className="text-sm"></Skeleton>
-              <Skeleton className="mt-2">Genre:</Skeleton>
-              <Skeleton>Average vote: </Skeleton>
-              <Skeleton>Vote count: </Skeleton>
+              <Skeleton className="h-6 my-2 w-1/2 bg-gray-500 rounded-md border border-orange-500"></Skeleton>
+              <Skeleton className="h-6 my-2 w-1/2 bg-gray-500 rounded-md border border-orange-500"></Skeleton>
+              <Skeleton className="h-6 my-2 w-1/2 bg-gray-500 rounded-md border border-orange-500"></Skeleton>
+              <Skeleton className="h-6 my-2 w-1/2 bg-gray-500 rounded-md border border-orange-500"></Skeleton>
+              <Skeleton className="h-6 my-2 w-1/2 bg-gray-500 rounded-md border border-orange-500"></Skeleton>
+              <Skeleton className="h-6 my-2 w-1/2 bg-gray-500 rounded-md border border-orange-500"></Skeleton>
             </div>
       </div>
     ))}
