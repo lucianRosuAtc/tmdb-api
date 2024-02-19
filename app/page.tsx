@@ -1,10 +1,11 @@
-import FetchAPI from "../components/FetchAPI"; // Add the correct relative path to the component
+import FetchAPI from "../components/FetchAPI"; 
 export default async function Home() {
-
-
   return (
-    <main className="">
-      <FetchAPI />
+    <main>
+      <h1 className="flex justify-center my-10 text-xl md:text-5xl text-white">
+        TMDB API
+      </h1>
+      <FetchAPI  />
     </main>
   );
 }
