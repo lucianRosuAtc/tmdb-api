@@ -1,4 +1,4 @@
-import  FetchAPI  from "@/components/FetchAPI";
+import FetchTvAPI from "../TV/_components/FetchTvAPI"
 import React from "react";
 
 export default function page() {
@@ -7,7 +7,7 @@ export default function page() {
       <h1 className="flex justify-center my-10 text-xl md:text-5xl text-white">
         Tv Shows
       </h1>
-      <FetchAPI />
+      <FetchTvAPI />
     </div>
   );
 }
