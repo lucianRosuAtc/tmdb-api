@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
+import {ScrollOnTopBtn} from "./ScrollOnTopBtn";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,6 +36,7 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
+
 }>) {
   return (
     <html lang="en">
@@ -44,6 +46,7 @@ export default function RootLayout({
         <Navbar />
 
         {children}
+        <ScrollOnTopBtn />
       </body>
     </html>
   );

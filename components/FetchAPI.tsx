@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { Suspense } from "react";
+import Loading from "@/app/loading";
 
 type Movie = {
   id: number;
@@ -36,7 +38,11 @@ export default function FetchAPI({ apiUrl }: { apiUrl: string }) {
   }, [apiUrl]);
   
   return (
+
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 m-20 ">
+
+
+      <Suspense fallback={<Loading />}>
       {movies.map((movie) => (
         <div key={movie.id} className="text-white">
           <div className="aspect-square relative">
@@ -58,6 +64,8 @@ export default function FetchAPI({ apiUrl }: { apiUrl: string }) {
           </div>
         </div>
       ))}
+    </Suspense>
+
     </div>
   );
 }
