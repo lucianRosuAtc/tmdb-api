@@ -24,7 +24,7 @@ export default function NavBar() {
           alt="TMDB"
           width={100}
           height={100}
-          className="md:ml-10"
+          className="md:ml-10 absolute top-4 left-4"
         />
       </div>
 
@@ -125,45 +125,44 @@ export default function NavBar() {
       </NavigationMenu>
 
       {/* Mobile Menu */}
-   
-      <NavigationMenu className="lg:hidden flex border">
-        <NavigationMenuItem className="text-primaryBg ">
-          <NavigationMenuTrigger className="">
-            Menu
-          </NavigationMenuTrigger>
-        
-          <NavigationMenuContent className="flex items-center justify-center">
-            <ul className="grid gap-3 p-6 ">
-              <ListItem href="/" title="Home">
-                My API App: Call API&apos;s from TMDB.
-              </ListItem>
-              <ListItem href="/Movie" title="Movie">
-                Discover new Movies
-              </ListItem>
-              <ListItem href="/MovieOfTheDay" title="Movie Of The Day">
-                Most popular Movies today
-              </ListItem>
-              <ListItem href="/MovieOfTheWeek" title="Movie Of The Week">
-                Most popular this Week
-              </ListItem>
-              <ListItem href="/TvShowOfTheDay" title="Tv Show Of The Day">
-                Most popular Tv Show today
-              </ListItem>
-              <ListItem href="/TvShowOfTheWeek" title="Tv Show Of The Week">
-                Most popular Tv Show of the week
-              </ListItem>
-              <ListItem
-                href="https://developer.themoviedb.org/docs/image-basics"
-                title="TMBD Documentation"
-              >
-                TMBD Documentation
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
+
+      <NavigationMenu className="lg:hidden">
+        <NavigationMenuList className="">
+          <NavigationMenuItem>
+            <NavigationMenuTrigger className="ml-40">
+              Menu
+            </NavigationMenuTrigger>
+
+            <NavigationMenuContent className="w-60">
+              <ul className="grid gap-3 p-6">
+                <ListItem href="/" title="Home"></ListItem>
+                <ListItem href="/Movie" title="Movie"></ListItem>
+                <ListItem
+                  href="/MovieOfTheDay"
+                  title="Movie Of The Day"
+                ></ListItem>
+                <ListItem
+                  href="/MovieOfTheWeek"
+                  title="Movie Of The Week"
+                ></ListItem>
+                <ListItem
+                  href="/TV"
+                  title="Tv Shows"
+                ></ListItem>
+                <ListItem
+                  href="/TvShowOfTheDay"
+                  title="Tv Show Of The Day"
+                ></ListItem>
+                <ListItem
+                  href="/TvShowOfTheWeek"
+                  title="Tv Show Of The Week"
+                ></ListItem>
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+        </NavigationMenuList>
       </NavigationMenu>
-      </div>
-   
+    </div>
   );
 }
 
