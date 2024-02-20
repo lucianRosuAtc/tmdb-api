@@ -17,7 +17,7 @@ import Image from "next/image";
 
 export default function NavBar() {
   return (
-    <div className="flex justify-between border lg:justify-center items-center gap-10 h-20 bg-primaryBg sticky top-0 z-50 px-4 lg:px-10 ">
+    <div className="flex justify-between lg:justify-center items-center gap-10 h-20 bg-primaryBg sticky top-0 z-50 px-4 lg:px-10 ">
       <div className="">
         <Image
           src="/img/navbar/blue_square_1.svg"
