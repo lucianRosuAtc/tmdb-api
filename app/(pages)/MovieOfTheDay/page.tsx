@@ -1,17 +1,16 @@
+import Loading from "@/app/loading";
 import FetchAPI from "@/components/FetchAPI";
-import { Suspense } from "react";
 
 export default async function page() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-    <div>
-      <h1 className="flex justify-center my-10 text-xl md:text-5xl text-white">
-        Movie Of The Day
-      </h1>
+      <div>
+        <h1 className="flex justify-center my-10 text-xl md:text-5xl text-white">
+          Movie Of The Day
+        </h1>
 
-      <FetchAPI
-        apiUrl={ `https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.API_KEY}&media_type=movie`}
-      />
-    </div></Suspense>
+        <FetchAPI
+          apiUrl={`https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.API_KEY}&media_type=movie`}
+        />
+      </div>
   );
 }

@@ -16,7 +16,7 @@ import {
 
 export default function NavBar() {
   return (
-    <div className="flex justify-center items-center gap-10 h-20 bg-[#212121]  sticky top-0 z-50">
+    <div className="flex justify-center items-center gap-10 h-20 bg-primaryBg  sticky top-0 z-50">
       <NavigationMenu>
         <NavigationMenuList className="gap-10">
           <NavigationMenuItem>

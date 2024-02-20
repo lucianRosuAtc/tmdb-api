@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} ${roboto.className} mx-auto max-w-[1920px] bg-[#212121]`}
+        className={`${inter.className} ${roboto.className} mx-auto max-w-[1920px] bg-primaryBg`}
       >
         <Navbar />
 
