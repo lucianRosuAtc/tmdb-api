@@ -7,6 +7,7 @@ type Movie = {
   original_title: string;
   overview: string;
   genre_ids: string;
+  release_date: string;
   backdrop_path: string;
   poster_path: string;
   vote_average: number;
@@ -20,6 +21,7 @@ const getMovie = async (apiUrl: string): Promise<Movie[]> => {
     throw new Error("Error fetching data");
   }
   const data = await res.json();
+  // console.log(data.results)
   return data.results;
 };
 
@@ -36,7 +38,7 @@ export default function FetchAPI({ apiUrl }: { apiUrl: string }) {
   }, [apiUrl]);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 m-20 ">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4  md:gap-10 m-10 md:m-20 ">
       {movies.map((movie) => (
         <div key={movie.id} className="text-white">
           <div className="aspect-square relative">
@@ -52,8 +54,8 @@ export default function FetchAPI({ apiUrl }: { apiUrl: string }) {
             <h2>Title: {movie.original_title}</h2>
             <h3>Overview:</h3>
             <p className="text-sm">{movie.overview}</p>
-            <h3 className="mt-2">Genre: {movie.genre_ids}</h3>
-            <h3>Average vote: {movie.vote_average}</h3>
+            <h3 className="mt-2">Release date: {movie.release_date}</h3>
+            <h3>Vote Average: {movie.vote_average}</h3>
             <h3>Vote count: {movie.vote_count}</h3>
           </div>
         </div>

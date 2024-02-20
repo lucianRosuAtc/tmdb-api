@@ -1,6 +1,5 @@
 import FetchAPI from "../components/FetchAPI";
 
-
 export default async function Home() {
   return (
     <main>
