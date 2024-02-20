@@ -4,6 +4,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from "next/image";
 
+
 type Movie = {
   id: number;
   original_title: string;
