@@ -1,3 +1,5 @@
+
+
 // "use client";
 
 // import * as React from "react";
@@ -31,47 +33,66 @@
 //       <NavigationMenu className="hidden lg:flex">
 //         <NavigationMenuList className=" gap-10">
 //           <NavigationMenuItem>
-//             <NavigationMenuTrigger>The Movie Data Base</NavigationMenuTrigger>
+//             <Link
+//               href="/"
+//               className="bg-white text-black text-sm font-medium p-3 rounded-md"
+//             >
+//               Movies & Tv
+//             </Link>
+//           </NavigationMenuItem>
+
+//           <NavigationMenuItem>
+//             <NavigationMenuTrigger>Movies</NavigationMenuTrigger>
 //             <NavigationMenuContent>
 //               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
 //                 <li className="row-span-3">
 //                   <NavigationMenuLink asChild>
 //                     <Link
-//                       className="flex h-full w-full select-none flex-col justify-start rounded-md bg-gradient-to-b from-muted/80 to-muted p-6 no-underline outline-none focus:shadow-lg
+//                       className="flex h-full w-full select-none flex-col justify-center rounded-md bg-gradient-to-b from-muted/80 to-muted p-10 no-underline outline-none focus:shadow-lg
 //                       border border-white hover:border-orange-500"
-//                       href="/"
+//                       href="/Movie"
 //                     >
-//                       <div className="mb-2 mt-4 text-lg font-medium">Home</div>
+//                       <div className="text-lg font-medium">Movies</div>
 //                       <p className="text-sm leading-tight text-muted-foreground">
-//                         My API App: Call API&apos;s from TMDB.
-//                       </p>
-//                       <p className="text-sm leading-tight text-muted-foreground mt-2">
-//                         Install shadcn ui components using CLI
+//                         Discover new Movies
 //                       </p>
 //                     </Link>
 //                   </NavigationMenuLink>
 //                 </li>
-//                 <ListItem
-//                   href="/Movie"
-//                   className="border border-white hover:border-orange-500"
-//                   title="Movie"
-//                 >
-//                   Discover new Movies
-//                 </ListItem>
-//                 <ListItem
-//                   href="/MovieOfTheDay"
-//                   className="border border-white hover:border-orange-500"
-//                   title="Movie Of The Day"
-//                 >
-//                   Most popular Movies today
-//                 </ListItem>
-//                 <ListItem
-//                   href="/MovieOfTheWeek"
-//                   className="border border-white hover:border-orange-500"
-//                   title="Movie Of The Week"
-//                 >
-//                   Most popular this Week
-//                 </ListItem>
+
+//                 <li>
+//                   <NavigationMenuLink asChild>
+//                     <Link
+//                       className="flex py-2 pl-6 select-none flex-col justify-center mx-a rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
+//                       border border-white hover:border-orange-500"
+//                       href="/MovieOfTheDay"
+//                     >
+//                       <div className="text-lg font-medium">
+//                         Movie Of The Day
+//                       </div>
+//                       <p className="text-sm leading-tight text-muted-foreground">
+//                         Most popular Movies today
+//                       </p>
+//                     </Link>
+//                   </NavigationMenuLink>
+//                 </li>
+
+//                 <li>
+//                   <NavigationMenuLink asChild>
+//                     <Link
+//                       className="flex py-2 pl-6 select-none flex-col justify-center mx-a rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
+//                       border border-white hover:border-orange-500"
+//                       href="/MovieOfTheWeek"
+//                     >
+//                       <div className="text-lg font-medium">
+//                         Movie Of The Week
+//                       </div>
+//                       <p className="text-sm leading-tight text-muted-foreground">
+//                         Most popular this Week
+//                       </p>
+//                     </Link>
+//                   </NavigationMenuLink>
+//                 </li>
 //               </ul>
 //             </NavigationMenuContent>
 //           </NavigationMenuItem>
@@ -207,6 +228,9 @@
 
 
 
+
+
+
 "use client";
 
 import * as React from "react";
@@ -255,13 +279,11 @@ export default function NavBar() {
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <Link
-                      className="flex h-full w-full select-none flex-col justify-start rounded-md bg-gradient-to-b from-muted/80 to-muted p-6 no-underline outline-none focus:shadow-lg
+                      className="flex h-full w-full select-none flex-col justify-center rounded-md bg-gradient-to-b from-muted/80 to-muted p-10 no-underline outline-none focus:shadow-lg
                       border border-white hover:border-orange-500"
                       href="/Movie"
                     >
-                      <div className="mb-2 mt-4 text-lg font-medium">
-                        Movies
-                      </div>
+                      <div className="text-lg font-medium">Movies</div>
                       <p className="text-sm leading-tight text-muted-foreground">
                         Discover new Movies
                       </p>
@@ -269,20 +291,39 @@ export default function NavBar() {
                   </NavigationMenuLink>
                 </li>
 
-                <ListItem
-                  href="/MovieOfTheDay"
-                  className="border border-white hover:border-orange-500"
-                  title="Movie Of The Day"
-                >
-                  Most popular Movies today
-                </ListItem>
-                <ListItem
-                  href="/MovieOfTheWeek"
-                  className="border border-white hover:border-orange-500"
-                  title="Movie Of The Week"
-                >
-                  Most popular this Week
-                </ListItem>
+                <li>
+                  <NavigationMenuLink asChild>
+                    <Link
+                      className="flex py-2 pl-6 select-none flex-col justify-center mx-a rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
+                      border border-white hover:border-orange-500"
+                      href="/MovieOfTheDay"
+                    >
+                      <div className="text-lg font-medium">
+                        Movie Of The Day
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        Most popular Movies today
+                      </p>
+                    </Link>
+                  </NavigationMenuLink>
+                </li>
+
+                <li>
+                  <NavigationMenuLink asChild>
+                    <Link
+                      className="flex py-2 pl-6 select-none flex-col justify-center mx-a rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
+                      border border-white hover:border-orange-500"
+                      href="/MovieOfTheWeek"
+                    >
+                      <div className="text-lg font-medium">
+                        Movie Of The Week
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        Most popular this Week
+                      </p>
+                    </Link>
+                  </NavigationMenuLink>
+                </li>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
