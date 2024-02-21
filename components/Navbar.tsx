@@ -21,7 +21,7 @@ export default function NavBar() {
     <div className="flex justify-between lg:justify-center items-center gap-10 h-20 bg-primaryBg sticky top-0 z-50 px-4 lg:px-10 ">
       <div className="">
         <Image
-          src="/img/navbar/blue_square_1.svg"
+          src="/img/logo/blue_square_1.svg"
           alt="TMDB"
           width={100}
           height={100}

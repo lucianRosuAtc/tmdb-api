@@ -3,6 +3,7 @@ import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import { ScrollOnTopBtn } from "./ScrollOnTopBtn";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -46,6 +47,7 @@ export default function RootLayout({
 
         {children}
         <ScrollOnTopBtn />
+        <Footer />
       </body>
     </html>
   );
