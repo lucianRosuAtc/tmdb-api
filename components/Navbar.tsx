@@ -328,41 +328,67 @@ export default function NavBar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
 
+
+
+{/* //////////  TV SHOWS  ////////// */}
+
           <NavigationMenuItem>
-            <NavigationMenuTrigger>The Movie Data Base</NavigationMenuTrigger>
+            <NavigationMenuTrigger>Tv Shows</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
                     <Link
-                      className="flex h-full w-full select-none flex-col justify-start rounded-md bg-gradient-to-b from-muted/80 to-muted p-6 no-underline outline-none focus:shadow-lg border border-white hover:border-orange-500"
+                      className="flex h-full w-full select-none flex-col justify-center rounded-md bg-gradient-to-b from-muted/80 to-muted p-10 no-underline outline-none focus:shadow-lg
+                      border border-white hover:border-orange-500"
                       href="/TV"
+                      >
+                        <div className=" text-lg font-medium"> Tv shows</div>
+                        <p className="text-sm leading-tight text-muted-foreground">
+                          My API App: Call API&apos;s from TMDB.
+                        </p>
+                    </Link>
+                  </NavigationMenuLink>
+                </li>
+
+                <li>
+                  <NavigationMenuLink asChild>
+                    <Link
+                      className="flex py-2 pl-6 select-none flex-col justify-center mx-a rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
+                      border border-white hover:border-orange-500"
+                      href="/TvShowOfTheDay"
                     >
-                      <div className=" text-lg font-medium"> Tv shows</div>
+                      <div className="text-lg font-medium">
+                      Tv Show Of The Day
+                      </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        My API App: Call API&apos;s from TMDB.
+                      Most popular Tv Show today
                       </p>
                     </Link>
                   </NavigationMenuLink>
                 </li>
 
-                <ListItem
-                  href="/TvShowOfTheDay"
-                  className="border border-white hover:border-orange-500"
-                  title="Tv Show Of The Day"
-                >
-                  Most popular Tv Show today
-                </ListItem>
-                <ListItem
-                  href="/TvShowOfTheWeek"
-                  className="border border-white hover:border-orange-500"
-                  title="Tv Show Of The Week"
-                >
-                  Most popular Tv Show of the week
-                </ListItem>
+                <li>
+                  <NavigationMenuLink asChild>
+                    <Link
+                      className="flex py-2 pl-6 select-none flex-col justify-center mx-a rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
+                      border border-white hover:border-orange-500"
+                      href="/TvShowOfTheWeek"
+                    >
+                      <div className="text-lg font-medium">
+                      Tv Show Of The Week
+                      </div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                      Most popular Tv Show of the week
+                      </p>
+                    </Link>
+                  </NavigationMenuLink>
+                </li>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
+
+  
 
           <NavigationMenuItem>
             <a
