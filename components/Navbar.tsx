@@ -204,7 +204,6 @@
 //   );
 // });
 // ListItem.displayName = "ListItem";
- 
 
 
 
@@ -241,7 +240,16 @@ export default function NavBar() {
       <NavigationMenu className="hidden lg:flex">
         <NavigationMenuList className=" gap-10">
           <NavigationMenuItem>
-            <NavigationMenuTrigger>The Movie Data Base</NavigationMenuTrigger>
+            <Link
+              href="/"
+              className="bg-white text-black text-sm font-medium p-3 rounded-md"
+            >
+              Movies & Tv
+            </Link>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Movies</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
@@ -249,25 +257,18 @@ export default function NavBar() {
                     <Link
                       className="flex h-full w-full select-none flex-col justify-start rounded-md bg-gradient-to-b from-muted/80 to-muted p-6 no-underline outline-none focus:shadow-lg
                       border border-white hover:border-orange-500"
-                      href="/"
+                      href="/Movie"
                     >
-                      <div className="mb-2 mt-4 text-lg font-medium">Home</div>
+                      <div className="mb-2 mt-4 text-lg font-medium">
+                        Movies
+                      </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        My API App: Call API&apos;s from TMDB.
-                      </p>
-                      <p className="text-sm leading-tight text-muted-foreground mt-2">
-                        Install shadcn ui components using CLI
+                        Discover new Movies
                       </p>
                     </Link>
                   </NavigationMenuLink>
                 </li>
-                <ListItem
-                  href="/Movie"
-                  className="border border-white hover:border-orange-500"
-                  title="Movie"
-                >
-                  Discover new Movies
-                </ListItem>
+
                 <ListItem
                   href="/MovieOfTheDay"
                   className="border border-white hover:border-orange-500"

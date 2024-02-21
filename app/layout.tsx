@@ -3,6 +3,7 @@ import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import {ScrollOnTopBtn} from "./ScrollOnTopBtn";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,14 +41,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Suspense fallback={<div>Loading...</div>}>
       <body
         className={`${inter.className} ${roboto.className} mx-auto max-w-[1920px] bg-primaryBg`}
       >
         <Navbar />
-
         {children}
         <ScrollOnTopBtn />
       </body>
+</Suspense>
     </html>
   );
 }

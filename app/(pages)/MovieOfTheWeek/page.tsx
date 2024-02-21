@@ -1,6 +1,6 @@
-import Loading from "@/app/loading";
 import FetchAPI from "@/components/FetchAPI";
 import { Suspense } from "react";
+import Loading from "@/app/loading";
 
 export default async function page() {
   return (
@@ -9,11 +9,10 @@ export default async function page() {
         Movie Of The Week
       </h1>
       <Suspense fallback={<Loading />}>
-
-      <FetchAPI
-        apiUrl={`https://api.themoviedb.org/3/trending/movie/week?api_key=${process.env.API_KEY}&media_type=movie`}
+        <FetchAPI
+          apiUrl={`https://api.themoviedb.org/3/trending/movie/week?api_key=${process.env.API_KEY}&media_type=movie`}
         />
-        </Suspense>
+      </Suspense>
     </div>
   );
 }
