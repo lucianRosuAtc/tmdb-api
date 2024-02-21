@@ -38,8 +38,8 @@ export default function FetchAPI({ apiUrl }: { apiUrl: string }) {
   }, [apiUrl]);
 
   return (
-    <div className="mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-10 m-10 md:m-20">
+        <div className="">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 px-4">
         {movies.map((movie) => (
           <div key={movie.id} className="text-white">
             <div className="aspect-square relative">
@@ -48,10 +48,10 @@ export default function FetchAPI({ apiUrl }: { apiUrl: string }) {
                 alt={movie.original_title}
                 width={400}
                 height={500}
-                className="object-cover rounded-md border border-orange-500"
+                className="object-cover rounded-md border border-orange-500 mx-auto md:mx-0"
               />
             </div>
-            <div className="flex flex-col justify-center mt-3 mb-10">
+            <div className="flex flex-col justify-center mt-3 mb-10 max-w-[400px] md:max-w-auto mx-auto md:mx-0">
               <h2>Title: {movie.original_title}</h2>
               <h3>Overview:</h3>
               <p className="text-sm">{movie.overview}</p>
