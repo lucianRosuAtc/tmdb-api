@@ -174,8 +174,8 @@ export default function NavBar() {
 
       <NavigationMenu className="lg:hidden">
         <NavigationMenuList className="">
-          <NavigationMenuItem>
-            <NavigationMenuTrigger className="ml-40">
+          <NavigationMenuItem className="flex justify-center items-center">
+            <NavigationMenuTrigger className="ml-40 flex justify-center items-center">
               Menu
             </NavigationMenuTrigger>
 
