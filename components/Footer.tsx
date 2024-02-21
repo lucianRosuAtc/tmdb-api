@@ -16,7 +16,7 @@ export default function Footer() {
             width={100}
             height={100}
             alt="footer logo"
-            className="border-b-2 border-orange-500 placeholder pb-2"
+            className="cursor-pointer"
           />
         </Link>
       </div>
@@ -82,7 +82,7 @@ export default function Footer() {
 
       <div className="flex justify-center">
         <div className="flex flex-col items-center">
-          <p className="text-2xl font-bold">Contact Us</p>
+       
         </div>
       </div>
     </div>

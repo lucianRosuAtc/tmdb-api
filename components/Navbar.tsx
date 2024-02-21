@@ -3,6 +3,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 import { cn } from "@/lib/utils";
 
@@ -176,7 +177,7 @@ export default function NavBar() {
         <NavigationMenuList className="">
           <NavigationMenuItem className="flex justify-center items-center">
             <NavigationMenuTrigger className="ml-40 flex justify-center items-center">
-              Menu
+              <GiHamburgerMenu />
             </NavigationMenuTrigger>
 
            <NavigationMenuContent>
