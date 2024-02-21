@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebookSquare } from "react-icons/fa";
+import { TfiEmail } from "react-icons/tfi";
+import { FaLinkedin } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -20,7 +24,10 @@ export default function Footer() {
           />
         </Link>
       </div>
+      <div className="flex flex-col justify-center items-center py-10 ">
 
+
+        <h2 className="text-goldTxt">USEFUL LINKS</h2>
       <div className="flex justify-center items-center text-white">
         <ul className="grid gap-3 p-6 grid-cols-2">
           <li>
@@ -53,7 +60,7 @@ export default function Footer() {
           <li>
             <Link
               className="flex justify-start rounded-md py-2 px-2 focus:shadow-lg hover:bg-gray-700 hover:text-orange-500
-    border-b border-b-transparent hover:border-b-orange-500"
+      border-b border-b-transparent hover:border-b-orange-500"
               href="/TV"
             >
               <p className="text-sm font-medium">Tv Shows</p>
@@ -79,11 +86,10 @@ export default function Footer() {
           </li>
         </ul>
       </div>
-
-      <div className="flex justify-center">
-        <div className="flex flex-col items-center">
-       
-        </div>
+      </div>
+      <div className="flex flex-col justify-center items-center py-10 ">
+      <div className="text-goldTxt">CONTACT US</div>
+        <div className="flex  items-center text-goldTxt"><FaXTwitter /> <FaFacebookSquare /> <TfiEmail />  <FaLinkedin /></div>
       </div>
     </div>
   );
