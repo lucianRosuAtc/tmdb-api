@@ -39,7 +39,7 @@ export default function FetchAPI({ apiUrl }: { apiUrl: string }) {
 
   return (
         <div className="">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 px-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 px-4 md:px-8">
         {movies.map((movie) => (
           <div key={movie.id} className="text-white">
             <div className="aspect-square relative">
