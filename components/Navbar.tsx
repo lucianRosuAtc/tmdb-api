@@ -240,7 +240,7 @@ export default function NavBar() {
                 <li>
                   <NavigationMenuLink asChild>
                     <Link
-                      className="flex py-2 px-2 h-full w-full select-none flex-col justify-center mx-a rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
+                      className="flex py-2 px-2 h-full w-full select-none flex-col justify-center rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
                       border border-white hover:border-orange-500"
                       href="/Movie"
                     >
@@ -251,7 +251,7 @@ export default function NavBar() {
                 <li>
                   <NavigationMenuLink asChild>
                     <Link
-                      className="flex py-2 px-2 h-full w-full select-none flex-col justify-center mx-a rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
+                      className="flex py-2 px-2 h-full w-full select-none flex-col justify-center rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
                       border border-white hover:border-orange-500"
                       href="/MovieOfTheDay"
                     >
@@ -264,7 +264,7 @@ export default function NavBar() {
                 <li>
                   <NavigationMenuLink asChild>
                     <Link
-                      className="flex py-2 px-2 h-full w-full select-none flex-col justify-center mx-a rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
+                      className="flex py-2 px-2 h-full w-full select-none flex-col justify-center rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
                       border border-white hover:border-orange-500"
                       href="/MovieOfTheWeek"
                     >
@@ -277,7 +277,7 @@ export default function NavBar() {
                 <li>
                   <NavigationMenuLink asChild>
                     <Link
-                      className="flex py-2 px-2 h-full w-full select-none flex-col justify-center mx-a rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
+                      className="flex py-2 px-2 h-full w-full select-none flex-col justify-center rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
                       border border-white hover:border-orange-500"
                       href="/TV"
                     >
@@ -288,7 +288,7 @@ export default function NavBar() {
                 <li>
                   <NavigationMenuLink asChild>
                     <Link
-                      className="flex py-2 px-2 h-full w-full select-none flex-col justify-center mx-a rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
+                      className="flex py-2 px-2 h-full w-full select-none flex-col justify-center rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
                       border border-white hover:border-orange-500"
                       href="/TvShowOfTheDay"
                     >
@@ -301,7 +301,7 @@ export default function NavBar() {
                 <li>
                   <NavigationMenuLink asChild>
                     <Link
-                      className="flex py-2 px-2 h-full w-full select-none flex-col justify-center mx-a rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
+                      className="flex py-2 px-2 h-full w-full select-none flex-col justify-center rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
                       border border-white hover:border-orange-500"
                       href="/TvShowOfTheWeek"
                     >
@@ -310,6 +310,49 @@ export default function NavBar() {
                       </p>
                     </Link>
                   </NavigationMenuLink>
+                </li>
+
+                <li>
+                  <NavigationMenuItem>
+                    <div
+                      className="flex py-2 px-2 h-full w-full select-none flex-col justify-center rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
+                    border border-white hover:border-orange-500"
+                    >
+                      <div className="">
+                        <div className="text-goldTxt">CONTACT US</div>
+                        <div className="flex justify-start items-center text-goldTxt">
+                          <Link
+                            href="https://twitter.com/home"
+                            target="_blank"
+                            className="p-2 h-8 hover:text-orange-500"
+                          >
+                            <FaXTwitter />
+                          </Link>
+                          <Link
+                            href="https://www.facebook.com/profile.php?id=100091859563019"
+                            target="_blank"
+                            className="p-2 h-8 hover:text-orange-500 "
+                          >
+                            <FaFacebookSquare />
+                          </Link>
+                          <a
+                            href="mailto:lucian.rosu@adopstar.com"
+                            target="_blank"
+                            className="p-2 h-8 hover:text-orange-500"
+                          >
+                            <TfiEmail />
+                          </a>
+                          <Link
+                            href="https://www.linkedin.com/feed/"
+                            target="_blank"
+                            className="p-2 h-8 hover:text-orange-500"
+                          >
+                            <FaLinkedin />
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </NavigationMenuItem>
                 </li>
               </ul>
             </NavigationMenuContent>
