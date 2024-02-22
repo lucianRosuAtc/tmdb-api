@@ -8,8 +8,8 @@ type Movie = {
   overview: string;
   genre_ids: string;
   release_date: string;
-  backdrop_path: string;
   poster_path: string;
+  backdrop_path: string;
   vote_average: number;
   vote_count: number;
 };
@@ -47,8 +47,8 @@ export default function FetchAPI({ apiUrl }: { apiUrl: string }) {
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 // src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
                 alt={movie.original_title}
-                width={400}
-                height={500}
+                width={1920}
+                height={1080}
                 className="object-cover rounded-md border border-orange-500 mx-auto md:mx-0"
               />
             </div>
