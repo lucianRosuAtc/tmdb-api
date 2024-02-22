@@ -16,7 +16,7 @@ type Movie = {
 
 const getMovie = async (apiUrl: string): Promise<Movie[]> => {
   const res = await fetch(apiUrl);
-
+  
   if (!res.ok) {
     throw new Error("Error fetching data");
   }
@@ -27,7 +27,7 @@ const getMovie = async (apiUrl: string): Promise<Movie[]> => {
 
 export default function FetchAPI({ apiUrl }: { apiUrl: string }) {
   const [movies, setMovies] = useState<Movie[]>([]);
-
+  
   useEffect(() => {
     const fetchMovies = async () => {
       const result = await getMovie(apiUrl);
@@ -38,13 +38,14 @@ export default function FetchAPI({ apiUrl }: { apiUrl: string }) {
   }, [apiUrl]);
 
   return (
-        <div className="">
+        <div>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 px-4 md:px-8">
         {movies.map((movie) => (
           <div key={movie.id} className="text-white">
             <div className="aspect-square relative">
               <Image
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                // src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
                 alt={movie.original_title}
                 width={400}
                 height={500}
