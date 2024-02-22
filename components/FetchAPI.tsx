@@ -21,7 +21,7 @@ const getMovie = async (apiUrl: string): Promise<Movie[]> => {
     throw new Error("Error fetching data");
   }
   const data = await res.json();
-  // console.log(data.results)
+  console.log(data.results)
   return data.results;
 };
 
