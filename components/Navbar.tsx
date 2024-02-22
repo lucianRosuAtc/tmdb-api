@@ -1,4 +1,3 @@
-
 "use client";
 
 import * as React from "react";
@@ -16,6 +15,9 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
+import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { TfiEmail } from "react-icons/tfi";
+import { FaFacebookSquare } from "react-icons/fa";
 
 export default function NavBar() {
   return (
@@ -97,9 +99,7 @@ export default function NavBar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
 
-
-
-{/* //////////  TV SHOWS  ////////// */}
+          {/* //////////  TV SHOWS  ////////// */}
 
           <NavigationMenuItem>
             <NavigationMenuTrigger>Tv Shows</NavigationMenuTrigger>
@@ -111,11 +111,11 @@ export default function NavBar() {
                       className="flex h-full w-full select-none flex-col justify-center rounded-md bg-gradient-to-b from-muted/80 to-muted p-10 no-underline outline-none focus:shadow-lg
                       border border-white hover:border-orange-500"
                       href="/TV"
-                      >
-                        <div className=" text-lg font-medium"> Tv shows</div>
-                        <p className="text-sm leading-tight text-muted-foreground">
-                          My API App: Call API&apos;s from TMDB.
-                        </p>
+                    >
+                      <div className=" text-lg font-medium"> Tv shows</div>
+                      <p className="text-sm leading-tight text-muted-foreground">
+                        My API App: Call API&apos;s from TMDB.
+                      </p>
                     </Link>
                   </NavigationMenuLink>
                 </li>
@@ -128,10 +128,10 @@ export default function NavBar() {
                       href="/TvShowOfTheDay"
                     >
                       <div className="text-lg font-medium">
-                      Tv Show Of The Day
+                        Tv Show Of The Day
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                      Most popular Tv Show today
+                        Most popular Tv Show today
                       </p>
                     </Link>
                   </NavigationMenuLink>
@@ -145,10 +145,10 @@ export default function NavBar() {
                       href="/TvShowOfTheWeek"
                     >
                       <div className="text-lg font-medium">
-                      Tv Show Of The Week
+                        Tv Show Of The Week
                       </div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                      Most popular Tv Show of the week
+                        Most popular Tv Show of the week
                       </p>
                     </Link>
                   </NavigationMenuLink>
@@ -157,7 +157,51 @@ export default function NavBar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
 
-  
+          {/* Contact  */}
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Contact Us</NavigationMenuTrigger>
+            <NavigationMenuContent className="">
+              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px]  ">
+                <div className="flex flex-col justify-start items-center py-2 border border-white bg-slate-100 rounded-md hover:border-orange-500">
+                  <div className="text-goldTxt md:mb-6">Contact Us</div>
+                  <div className="flex  justify-center items-center text-goldTxt">
+                    <Link
+                      href="https://twitter.com/home"
+                      target="_blank"
+                      className="p-4 h-8 hover:text-orange-500 flex py-2 select-none flex-col justify-center mx-a rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted no-underline outline-none focus:shadow-lg
+                      border border-slate-100 hover:border-orange-500"
+                    >
+                      <FaXTwitter />
+                    </Link>
+                    <Link
+                      href="https://www.facebook.com/profile.php?id=100091859563019"
+                      target="_blank"
+                      className="p-4 h-8 hover:text-orange-500 flex py-2  select-none flex-col justify-center mx-a rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted no-underline outline-none focus:shadow-lg
+                      border border-slate-100 hover:border-orange-500"
+                    >
+                      <FaFacebookSquare />
+                    </Link>
+                    <a
+                      href="mailto:lucian.rosu@adopstar.com"
+                      target="_blank"
+                      className="p-4 h-8 hover:text-orange-500 flex py-2  select-none flex-col justify-center mx-a rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted no-underline outline-none focus:shadow-lg
+                      border border-slate-100 hover:border-orange-500"
+                    >
+                      <TfiEmail />
+                    </a>
+                    <Link
+                      href="https://www.linkedin.com/feed/"
+                      target="_blank"
+                      className="p-4 h-8 hover:text-orange-500 flex py-2  select-none flex-col justify-center mx-a rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted no-underline outline-none focus:shadow-lg
+                      border border-slate-100 hover:border-orange-500"
+                    >
+                      <FaLinkedin />
+                    </Link>
+                  </div>
+                </div>
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
 
           <NavigationMenuItem>
             <a
@@ -180,7 +224,7 @@ export default function NavBar() {
               <GiHamburgerMenu />
             </NavigationMenuTrigger>
 
-           <NavigationMenuContent>
+            <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
@@ -188,9 +232,8 @@ export default function NavBar() {
                       className="flex h-full w-full select-none flex-col justify-start rounded-md bg-gradient-to-b from-muted/80 to-muted py-2 px-2 no-underline outline-none focus:shadow-lg
                       border border-white hover:border-orange-500"
                       href="/"
-                      >
-                        <p className=" text-lg font-medium">Home</p>
-                 
+                    >
+                      <p className=" text-lg font-medium">Home</p>
                     </Link>
                   </NavigationMenuLink>
                 </li>
@@ -201,9 +244,7 @@ export default function NavBar() {
                       border border-white hover:border-orange-500"
                       href="/Movie"
                     >
-                      <p className="text-sm font-medium">
-                   Movie
-                      </p>
+                      <p className="text-sm font-medium">Movie</p>
                     </Link>
                   </NavigationMenuLink>
                 </li>
@@ -215,7 +256,7 @@ export default function NavBar() {
                       href="/MovieOfTheDay"
                     >
                       <p className="text-sm font-medium text-muted-foreground">
-                      Movie Of The Day
+                        Movie Of The Day
                       </p>
                     </Link>
                   </NavigationMenuLink>
@@ -228,7 +269,7 @@ export default function NavBar() {
                       href="/MovieOfTheWeek"
                     >
                       <p className="text-sm font-medium text-muted-foreground">
-                      Movie Of The Week
+                        Movie Of The Week
                       </p>
                     </Link>
                   </NavigationMenuLink>
@@ -240,9 +281,7 @@ export default function NavBar() {
                       border border-white hover:border-orange-500"
                       href="/TV"
                     >
-                      <p className="text-sm font-medium">
-                      Tv Shows
-                      </p>
+                      <p className="text-sm font-medium">Tv Shows</p>
                     </Link>
                   </NavigationMenuLink>
                 </li>
@@ -254,7 +293,7 @@ export default function NavBar() {
                       href="/TvShowOfTheDay"
                     >
                       <p className="text-sm font-medium text-muted-foreground">
-                      Tv Show Of The Day
+                        Tv Show Of The Day
                       </p>
                     </Link>
                   </NavigationMenuLink>
@@ -266,13 +305,12 @@ export default function NavBar() {
                       border border-white hover:border-orange-500"
                       href="/TvShowOfTheWeek"
                     >
-                    <p className="text-sm font-medium text-muted-foreground">
-                      Tv Show Of The Day
+                      <p className="text-sm font-medium text-muted-foreground">
+                        Tv Show Of The Day
                       </p>
                     </Link>
                   </NavigationMenuLink>
                 </li>
-
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>

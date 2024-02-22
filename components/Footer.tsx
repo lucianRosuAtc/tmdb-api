@@ -84,6 +84,9 @@ export default function Footer() {
           </ul>
         </div>
       </div>
+
+      {/* *********** Contact ******** */}
+      
       <div className="flex flex-col justify-start items-center py-10">
         <div className="text-goldTxt md:mb-6">CONTACT US</div>
         <div className="flex  justify-center items-center text-goldTxt">
