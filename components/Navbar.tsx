@@ -99,7 +99,7 @@ export default function NavBar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
 
-          {/* //////////  TV SHOWS  ////////// */}
+          {/* //////////  TV SHOWS  ///////////// */}
 
           <NavigationMenuItem>
             <NavigationMenuTrigger>Tv Shows</NavigationMenuTrigger>
