@@ -1,25 +1,16 @@
 import { Suspense } from "react";
 import FetchAPI from "../components/FetchAPI";
 import Loading from "./loading";
-import Image from "next/image";
+import Hero from "@/components/Hero";
+import Wording from "@/components/Wording";
+import wordingHome from "@/components/wordind-data"
 
 export default async function Home() {
   return (
     <main>
-      <div className="flex items-center justify-center relative pb-10">
-        <Image
-          src="/img/hero/badBatch.png"
-          alt="hero"
-          width={1920}
-          height={680}
-          className=""
-        />
-
-        <h1 className="flex justify-center my-10 text-xl md:text-8xl text-white absolute">
-          Trends of the day
-        </h1>
-      </div>
+      <Hero heroImage="/img/hero/badBatch.jpg" heroTitle="Trends of the day" heroAlt="Bad Batch movie logo"/>
       <Suspense fallback={<Loading />}>
+      <Wording wordingData={wordingHome[0]} />
         <FetchAPI
           apiUrl={`https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.API_KEY}&append_to_response=movie,tv&time`}
         />

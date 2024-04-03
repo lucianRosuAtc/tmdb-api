@@ -114,7 +114,7 @@ export default function NavBar() {
                     >
                       <div className=" text-lg font-medium"> Tv shows</div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        My API App: Call API&apos;s from TMDB.
+                        Discover new Tv Shows.
                       </p>
                     </Link>
                   </NavigationMenuLink>
@@ -161,41 +161,33 @@ export default function NavBar() {
           <NavigationMenuItem>
             <NavigationMenuTrigger>Contact Us</NavigationMenuTrigger>
             <NavigationMenuContent className="">
-              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px]  ">
+              <ul className="grid gap-3 p-6 md:w-[200px] lg:w-[500px]  ">
                 <div className="flex flex-col justify-start items-center py-2 border border-white bg-slate-100 rounded-md hover:border-orange-500">
                   <div className="text-goldTxt md:mb-6">Contact Us</div>
                   <div className="flex  justify-center items-center text-goldTxt">
                     <Link
-                      href="https://twitter.com/home"
+                      href="https://twitter.com/LucianRosuATC"
                       target="_blank"
-                      className="p-4 h-8 hover:text-orange-500 flex py-2 select-none flex-col justify-center mx-a rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted no-underline outline-none focus:shadow-lg
+                      className="p-3 hover:text-orange-500 flex select-none flex-col justify-center rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted no-underline outline-none focus:shadow-lg
                       border border-slate-100 hover:border-orange-500"
                     >
-                      <FaXTwitter />
-                    </Link>
-                    <Link
-                      href="https://www.facebook.com/profile.php?id=100091859563019"
-                      target="_blank"
-                      className="p-4 h-8 hover:text-orange-500 flex py-2  select-none flex-col justify-center mx-a rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted no-underline outline-none focus:shadow-lg
-                      border border-slate-100 hover:border-orange-500"
-                    >
-                      <FaFacebookSquare />
+                      <FaXTwitter className="h-10 w-10" />
                     </Link>
                     <a
-                      href="mailto:lucian.rosu@adopstar.com"
+                      href="mailto:lucian.atc@gmail.com"
                       target="_blank"
-                      className="p-4 h-8 hover:text-orange-500 flex py-2  select-none flex-col justify-center mx-a rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted no-underline outline-none focus:shadow-lg
+                      className="p-3 mx-5 hover:text-orange-500 flex select-none flex-col justify-center rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted no-underline outline-none focus:shadow-lg
                       border border-slate-100 hover:border-orange-500"
                     >
-                      <TfiEmail />
+                      <TfiEmail className="h-10 w-10" />
                     </a>
                     <Link
-                      href="https://www.linkedin.com/feed/"
+                      href="https://www.linkedin.com/in/lucian-rosu-atc//"
                       target="_blank"
-                      className="p-4 h-8 hover:text-orange-500 flex py-2  select-none flex-col justify-center mx-a rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted no-underline outline-none focus:shadow-lg
+                      className="p-3  hover:text-orange-500 flex select-none flex-col justify-center rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted no-underline outline-none focus:shadow-lg
                       border border-slate-100 hover:border-orange-500"
                     >
-                      <FaLinkedin />
+                      <FaLinkedin className="h-10 w-10" />
                     </Link>
                   </div>
                 </div>
@@ -203,22 +195,13 @@ export default function NavBar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
 
-          <NavigationMenuItem>
-            <a
-              href="https://developer.themoviedb.org/docs/image-basics"
-              target="_blank"
-              className="bg-white text-black text-sm font-medium p-3 rounded-md"
-            >
-              TMBD Doc
-            </a>
-          </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
 
       {/* Mobile Menu */}
 
       <NavigationMenu className="lg:hidden">
-        <NavigationMenuList className="">
+        <NavigationMenuList className="w-full">
           <NavigationMenuItem className="flex justify-center items-center">
             <NavigationMenuTrigger className="ml-40 flex justify-center items-center">
               <GiHamburgerMenu />
@@ -306,7 +289,7 @@ export default function NavBar() {
                       href="/TvShowOfTheWeek"
                     >
                       <p className="text-sm font-medium text-muted-foreground">
-                        Tv Show Of The Day
+                        Tv Show Of The Week
                       </p>
                     </Link>
                   </NavigationMenuLink>
@@ -322,28 +305,21 @@ export default function NavBar() {
                         <div className="text-goldTxt">CONTACT US</div>
                         <div className="flex justify-start items-center text-goldTxt">
                           <Link
-                            href="https://twitter.com/home"
+                            href="https://twitter.com/LucianRosuATC"
                             target="_blank"
                             className="p-2 h-8 hover:text-orange-500"
                           >
                             <FaXTwitter />
                           </Link>
-                          <Link
-                            href="https://www.facebook.com/profile.php?id=100091859563019"
-                            target="_blank"
-                            className="p-2 h-8 hover:text-orange-500 "
-                          >
-                            <FaFacebookSquare />
-                          </Link>
                           <a
-                            href="mailto:lucian.rosu@adopstar.com"
+                            href="mailto:lucian.rosu.atc@gmail.com"
                             target="_blank"
                             className="p-2 h-8 hover:text-orange-500"
                           >
                             <TfiEmail />
                           </a>
                           <Link
-                            href="https://www.linkedin.com/feed/"
+                            href="https://www.linkedin.com/in/lucian-rosu-atc/"
                             target="_blank"
                             className="p-2 h-8 hover:text-orange-500"
                           >
