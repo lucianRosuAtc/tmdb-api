@@ -3,8 +3,10 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 type Movie = {
+  release_date: string;
   id: number;
   original_title: string;
+  name:string;
   overview: string;
   genre_ids: string;
   first_air_date: string;
@@ -12,6 +14,8 @@ type Movie = {
   backdrop_path: string;
   vote_average: number;
   vote_count: number;
+  video: any;
+  person:string;
 };
 
 const getMovie = async (apiUrl: string): Promise<Movie[]> => {
@@ -21,7 +25,7 @@ const getMovie = async (apiUrl: string): Promise<Movie[]> => {
     throw new Error("Error fetching data");
   }
   const data = await res.json();
-  // console.log(data.results)
+  console.log(data.results)
   return data.results;
 };
 
@@ -56,12 +60,13 @@ export default function FetchAPI({ apiUrl }: { apiUrl: string }) {
                 />
             </div>
             <div className="flex flex-col justify-center mt-3 mb-10 max-w-[400px] md:max-w-auto mx-auto md:mx-0">
-              <h2>Title: {movie.original_title}</h2>
-              <h3>Overview:</h3>
-              <p className="text-sm">{movie.overview}</p>
-              <h3 className="mt-2">Release date: {movie.first_air_date}</h3>
+              <h2>Title: {movie.name} {movie.original_title}</h2>
+              <p className="text-sm"><span className="texl-base">Overview: </span>{movie.overview}</p>
+              <h3 className="mt-2">Release date: {movie.first_air_date}{movie.release_date}</h3>
               <h3>Vote Average: {movie.vote_average}</h3>
               <h3>Vote count: {movie.vote_count}</h3>
+              {/* <p className="">{movie.video}</p>
+              <p className="">{movie.person}</p> */}
             </div>
           </div>
         ))}
@@ -69,3 +74,6 @@ export default function FetchAPI({ apiUrl }: { apiUrl: string }) {
     </div>
   );
 }
+
+
+
