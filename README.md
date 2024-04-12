@@ -1,5 +1,5 @@
 
-See this online at: https://tmdb-api-eta.vercel.app/
+See this project online at: https://tmdb-api-eta.vercel.app/
 
 
 
