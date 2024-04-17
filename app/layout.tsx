@@ -17,20 +17,20 @@ export const metadata: Metadata = {
   description: "Learning App",
   keywords: "Next.js, TypeScript, Tailwind CSS",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
-  openGraph: {
-    title: "TMBD Movie App",
-    description: "Latest movies and Tv Shows",
-    url: "https://tmdb-api-eta.vercel.app/",
-    siteName: "TMBD Movie App",
-    images: {
-      url: "/og-image.jpg",
-      width: 1200,
-      height: 630,
-      alt: "TMBD Movie App",
-    },
-    locale: "en_US",
-    type: "website",
-  },
+  // openGraph: {
+  //   title: "TMBD Movie App",
+  //   description: "Latest movies and Tv Shows",
+  //   url: "https://tmdb-api-eta.vercel.app/",
+  //   siteName: "TMBD Movie App",
+  //   images: {
+  //     url: "/og-image.jpg",
+  //     width: 1200,
+  //     height: 630,
+  //     alt: "TMBD Movie App",
+  //   },
+  //   locale: "en_US",
+  //   type: "website",
+  // },
 };
 
 export default function RootLayout({

@@ -23,10 +23,9 @@ import {
 } from "@/components/ui/sheet";
 import { AlignJustify } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import { navigationlinks } from "./social-data";
 import { social } from "./social-data";
-
 
 export default function NavBar() {
   const pathname = usePathname();
@@ -204,82 +203,72 @@ export default function NavBar() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-
         </NavigationMenuList>
       </NavigationMenu>
 
       {/*MARK: Mobile Menu */}
 
-
-
-
-
-
-
- <div className="lg:hidden">
-
-    <Sheet>
-      <SheetTrigger>
-        <AlignJustify className="cursor-pointer text-white"/>
-      </SheetTrigger>
-      <SheetContent className="bg-primaryBg w-full">
-        <div className="flex flex-col items-center justify-between h-full py-8">
-          <div className="flex flex-col items-center justify-between gap-y-20">
-            <SheetClose asChild>
-              <Link href="/">
-                <Image
-                  src="/img/logo/blue_square_1.svg"
-                  alt="TMDB"
-                  width={100}
-                  height={100}
-                  className="md:ml-10 absolute top-4 left-4"
-                  priority
-                />
-              </Link>
-            </SheetClose>
-            <div className="flex flex-col items-center text-2xl gap-y-8">
-              {navigationlinks.map((navlink) => (
-                <SheetClose asChild key={navlink.url}>
-                  <Link
-                    href={navlink.url}
-                    className="relative text-orange-100 hover:text-goldTxt transition-all"
-                    >
-                    {navlink.url === pathname && (
-                      <motion.span
-                        initial={{ y: "-100%" }}
-                        animate={{ y: 0 }}
-                        transition={{ type: "tween" }}
-                        layoutId="underline"
-                        className="absolute left-0 top-full h-[2px]  bg-goldTxt w-full mt-1"
-                        />
-                    )}
-                    {navlink.name}
+      <div className="lg:hidden">
+        <Sheet>
+          <SheetTrigger>
+            <AlignJustify className="cursor-pointer text-white" />
+          </SheetTrigger>
+          <SheetContent className="bg-primaryBg w-full">
+            <div className="flex flex-col items-center justify-between h-full py-8">
+              <div className="flex flex-col items-center justify-between gap-y-20">
+                <SheetClose asChild>
+                  <Link href="/">
+                    <Image
+                      src="/img/logo/blue_square_1.svg"
+                      alt="TMDB"
+                      width={100}
+                      height={100}
+                      className="md:ml-10 absolute top-4 left-4"
+                      priority
+                    />
                   </Link>
                 </SheetClose>
-              ))}
-            </div>
-          </div>
-  
-          <SheetClose asChild>
-            <div className="flex gap-x-8">
-              {social.map((item, index) => (
-                <a
-                href={item.url}
-                key={index}
-                target="_blank"
-                className="text-4xl text-orange-500 hover:text-orange-100 transition-all"
-                >
-                  {item.name}
-                </a>
-              ))}
-            </div>
-          </SheetClose>
-        </div>
-      </SheetContent>
-    </Sheet>
+                <div className="flex flex-col items-center text-2xl gap-y-8">
+                  {navigationlinks.map((navlink) => (
+                    <SheetClose asChild key={navlink.url}>
+                      <Link
+                        href={navlink.url}
+                        className="relative text-orange-100 hover:text-goldTxt transition-all"
+                      >
+                        {navlink.url === pathname && (
+                          <motion.span
+                            initial={{ y: "-100%" }}
+                            animate={{ y: 0 }}
+                            transition={{ type: "tween" }}
+                            layoutId="underline"
+                            className="absolute left-0 top-full h-[2px]  bg-goldTxt w-full mt-1"
+                          />
+                        )}
+                        {navlink.name}
+                      </Link>
+                    </SheetClose>
+                  ))}
+                </div>
               </div>
- 
 
+              <SheetClose asChild>
+                <div className="flex gap-x-8">
+                  {social.map((item, index) => (
+                    <a
+                      href={item.url}
+                      key={index}
+                      target="_blank"
+                      className="text-4xl text-orange-500 hover:text-orange-100 transition-all"
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+              </SheetClose>
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
     </div>
   );
 }
@@ -295,7 +284,7 @@ const ListItem = React.forwardRef<
           ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
+            className,
           )}
           {...props}
         >
