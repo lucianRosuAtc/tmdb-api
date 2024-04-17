@@ -6,7 +6,7 @@ secondParagraph:"Explore our curated selection of the hottest films, each accomp
 thirdParagraph:"So, grab your snacks, find a cozy spot, and prepare to be entertained. Start your movie night off right with our handpicked selection of the latest must-see flicks. Let's make some popcorn and enjoy the show!",
 },
 {
-    header:"Movies:",
+    header:"New Movies:",
     firstParagraph:"Discover the latest blockbuster hits and hidden gems from the silver screen. Whether you're craving heart-pounding action, thought-provoking dramas, or light-hearted comedies, we've curated a selection of films to satisfy every movie lover's palate.",
     secondParagraph:"Unwind with our handpicked selection of timeless classics and exciting new releases. From epic adventures to intimate character studies, there's something for everyone to enjoy. Immerse yourself in captivating stories that will transport you to new and exciting worlds.",
 },

@@ -2,10 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { GiHamburgerMenu } from "react-icons/gi";
-
 import { cn } from "@/lib/utils";
-
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -18,8 +15,21 @@ import Image from "next/image";
 import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
 
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+} from "@/components/ui/sheet";
+import { AlignJustify } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { motion } from 'framer-motion';
+import { navigationlinks } from "./social-data";
+import { social } from "./social-data";
+
 
 export default function NavBar() {
+  const pathname = usePathname();
   return (
     <div className="flex justify-between lg:justify-center items-center gap-10 h-20 bg-primaryBg sticky top-0 z-50 px-4 lg:px-10 ">
       <div className="">
@@ -33,7 +43,7 @@ export default function NavBar() {
       </div>
 
       <NavigationMenu className="hidden lg:flex">
-        <NavigationMenuList className=" gap-10">
+        <NavigationMenuList className="gap-10">
           <NavigationMenuItem>
             <Link
               href="/"
@@ -52,9 +62,9 @@ export default function NavBar() {
                     <Link
                       className="flex h-full w-full select-none flex-col justify-center rounded-md bg-gradient-to-b from-muted/80 to-muted p-10 no-underline outline-none focus:shadow-lg
                       border border-white hover:border-orange-500"
-                      href="/Movie"
+                      href="/Movies"
                     >
-                      <div className="text-lg font-medium">Movies</div>
+                      <div className="text-lg font-medium">New Movies</div>
                       <p className="text-sm leading-tight text-muted-foreground">
                         Discover new Movies
                       </p>
@@ -198,143 +208,78 @@ export default function NavBar() {
         </NavigationMenuList>
       </NavigationMenu>
 
-      {/* Mobile Menu */}
+      {/*MARK: Mobile Menu */}
 
-      <NavigationMenu className="lg:hidden">
-        <NavigationMenuList className="w-full">
-          <NavigationMenuItem className="flex justify-center items-center">
-            <NavigationMenuTrigger className="ml-40 flex justify-center items-center">
-              <GiHamburgerMenu />
-            </NavigationMenuTrigger>
 
-            <NavigationMenuContent>
-              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <li className="row-span-3">
-                  <NavigationMenuLink asChild>
-                    <Link
-                      className="flex h-full w-full select-none flex-col justify-start rounded-md bg-gradient-to-b from-muted/80 to-muted py-2 px-2 no-underline outline-none focus:shadow-lg
-                      border border-white hover:border-orange-500"
-                      href="/"
-                    >
-                      <p className=" text-lg font-medium">Home</p>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      className="flex py-2 px-2 h-full w-full select-none flex-col justify-center rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
-                      border border-white hover:border-orange-500"
-                      href="/Movie"
-                    >
-                      <p className="text-sm font-medium">Movie</p>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      className="flex py-2 px-2 h-full w-full select-none flex-col justify-center rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
-                      border border-white hover:border-orange-500"
-                      href="/MovieOfTheDay"
-                    >
-                      <p className="text-sm font-medium text-muted-foreground">
-                        Movie Of The Day
-                      </p>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      className="flex py-2 px-2 h-full w-full select-none flex-col justify-center rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
-                      border border-white hover:border-orange-500"
-                      href="/MovieOfTheWeek"
-                    >
-                      <p className="text-sm font-medium text-muted-foreground">
-                        Movie Of The Week
-                      </p>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      className="flex py-2 px-2 h-full w-full select-none flex-col justify-center rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
-                      border border-white hover:border-orange-500"
-                      href="/TV"
-                    >
-                      <p className="text-sm font-medium">Tv Shows</p>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      className="flex py-2 px-2 h-full w-full select-none flex-col justify-center rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
-                      border border-white hover:border-orange-500"
-                      href="/TvShowOfTheDay"
-                    >
-                      <p className="text-sm font-medium text-muted-foreground">
-                        Tv Show Of The Day
-                      </p>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      className="flex py-2 px-2 h-full w-full select-none flex-col justify-center rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
-                      border border-white hover:border-orange-500"
-                      href="/TvShowOfTheWeek"
-                    >
-                      <p className="text-sm font-medium text-muted-foreground">
-                        Tv Show Of The Week
-                      </p>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
 
-                <li>
-                  <NavigationMenuItem>
-                    <div
-                      className="flex py-2 px-2 h-full w-full select-none flex-col justify-center rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted  no-underline outline-none focus:shadow-lg
-                    border border-white hover:border-orange-500"
+
+
+
+
+ <div className="lg:hidden">
+
+    <Sheet>
+      <SheetTrigger>
+        <AlignJustify className="cursor-pointer text-white"/>
+      </SheetTrigger>
+      <SheetContent className="bg-primaryBg w-full">
+        <div className="flex flex-col items-center justify-between h-full py-8">
+          <div className="flex flex-col items-center justify-between gap-y-20">
+            <SheetClose asChild>
+              <Link href="/">
+                <Image
+                  src="/img/logo/blue_square_1.svg"
+                  alt="TMDB"
+                  width={100}
+                  height={100}
+                  className="md:ml-10 absolute top-4 left-4"
+                  priority
+                />
+              </Link>
+            </SheetClose>
+            <div className="flex flex-col items-center text-2xl gap-y-8">
+              {navigationlinks.map((navlink) => (
+                <SheetClose asChild key={navlink.url}>
+                  <Link
+                    href={navlink.url}
+                    className="relative text-orange-100 hover:text-goldTxt transition-all"
                     >
-                      <div className="">
-                        <div className="text-goldTxt">CONTACT US</div>
-                        <div className="flex justify-start items-center text-goldTxt">
-                          <Link
-                            href="https://twitter.com/LucianRosuATC"
-                            target="_blank"
-                            className="p-2 h-8 hover:text-orange-500"
-                          >
-                            <FaXTwitter />
-                          </Link>
-                          <a
-                            href="mailto:lucian.rosu.atc@gmail.com"
-                            target="_blank"
-                            className="p-2 h-8 hover:text-orange-500"
-                          >
-                            <TfiEmail />
-                          </a>
-                          <Link
-                            href="https://www.linkedin.com/in/lucian-rosu-atc/"
-                            target="_blank"
-                            className="p-2 h-8 hover:text-orange-500"
-                          >
-                            <FaLinkedin />
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </NavigationMenuItem>
-                </li>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
+                    {navlink.url === pathname && (
+                      <motion.span
+                        initial={{ y: "-100%" }}
+                        animate={{ y: 0 }}
+                        transition={{ type: "tween" }}
+                        layoutId="underline"
+                        className="absolute left-0 top-full h-[2px]  bg-goldTxt w-full mt-1"
+                        />
+                    )}
+                    {navlink.name}
+                  </Link>
+                </SheetClose>
+              ))}
+            </div>
+          </div>
+  
+          <SheetClose asChild>
+            <div className="flex gap-x-8">
+              {social.map((item, index) => (
+                <a
+                href={item.url}
+                key={index}
+                target="_blank"
+                className="text-4xl text-orange-500 hover:text-orange-100 transition-all"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </SheetClose>
+        </div>
+      </SheetContent>
+    </Sheet>
+              </div>
+ 
+
     </div>
   );
 }
