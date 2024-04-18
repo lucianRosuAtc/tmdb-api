@@ -168,9 +168,9 @@ export default function NavBar() {
           <NavigationMenuItem className="border-2 border-primary hover:border-orange-500 rounded-lg">
             <NavigationMenuTrigger>Contact Us</NavigationMenuTrigger>
             <NavigationMenuContent className="">
-              <ul className="grid gap-3 p-6 md:w-[200px] lg:w-[500px]  ">
+              <ul className="grid gap-3 p-6 md:w-[200px] lg:w-[500px]">
                 <div className="flex flex-col justify-start items-center py-2 border border-white bg-slate-100 rounded-md hover:border-orange-500">
-                  <div className="text-2xl text-orange-500 md:mb-6">Contact Us</div>
+                  <div className="text-2xl font-semibold text-orange-500 md:mb-6">Contact Us</div>
                   <Socials MyClassName="text-4xl text-orange-500 hover:text-primary transition-all"/>
                 </div>
               </ul>
@@ -184,7 +184,7 @@ export default function NavBar() {
 
       <div className="lg:hidden">
         <Sheet>
-          <SheetTrigger className="mr-4 border">
+          <SheetTrigger className="mr-4">
             <AlignJustify className="cursor-pointer text-white "/>
           </SheetTrigger>
           <SheetContent className="bg-primaryBg w-full">

@@ -25,7 +25,6 @@ const getMovie = async (apiUrl: string): Promise<Movie[]> => {
     throw new Error("Error fetching data");
   }
   const data = await res.json();
-  console.log(data.results)
   return data.results;
 };
 
@@ -41,8 +40,6 @@ export default function FetchAPI({ apiUrl }: { apiUrl: string }) {
     fetchMovies();
   }, [apiUrl]);
   
-
-  console.log(movies);
   
   return (
     <div>
@@ -65,8 +62,6 @@ export default function FetchAPI({ apiUrl }: { apiUrl: string }) {
               <h3 className="mt-2">Release date: {movie.first_air_date}{movie.release_date}</h3>
               <h3>Vote Average: {movie.vote_average}</h3>
               <h3>Vote count: {movie.vote_count}</h3>
-              {/* <p className="">{movie.video}</p>
-              <p className="">{movie.person}</p> */}
             </div>
           </div>
         ))}
