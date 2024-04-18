@@ -184,8 +184,8 @@ export default function NavBar() {
 
       <div className="lg:hidden">
         <Sheet>
-          <SheetTrigger>
-            <AlignJustify className="cursor-pointer text-white mr-4"/>
+          <SheetTrigger className="mr-4 border">
+            <AlignJustify className="cursor-pointer text-white "/>
           </SheetTrigger>
           <SheetContent className="bg-primaryBg w-full">
             <div className="flex flex-col items-center justify-between h-full py-8">
