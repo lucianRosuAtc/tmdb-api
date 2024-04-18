@@ -15,7 +15,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "TMBD Movie App",
   description: "Learning App",
-  keywords: "Next.js, TypeScript, Tailwind CSS",
+  keywords: "Next.js, TypeScript, API's, TailwindCSS",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
   // openGraph: {
   //   title: "TMBD Movie App",

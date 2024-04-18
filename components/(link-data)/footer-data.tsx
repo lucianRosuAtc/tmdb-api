@@ -1,7 +1,7 @@
 const footerLinks=[
 {
-footerLink:"/Movie",
-footerLinkName:"Movie",
+footerLink:"/Movies",
+footerLinkName:"New Movies",
 },
 
 {

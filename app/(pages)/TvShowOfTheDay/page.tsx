@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import Loading from "@/app/loading";
 import Hero from "@/components/Hero";
 import Wording from "@/components/Wording";
-import wordingHome from "@/components/wordind-data";
+import wordingHome from "@/components/(link-data)/wordind-data";
 
 export default async function page() {
   return (

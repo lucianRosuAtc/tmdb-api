@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import Image from "next/image";
 import Hero from "@/components/Hero";
 import Wording from "@/components/Wording";
-import wordingHome from "@/components/wordind-data";
+import wordingHome from "@/components/(link-data)/wordind-data";
 
 export default async function page() {
   return (
