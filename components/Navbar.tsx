@@ -179,16 +179,17 @@ export default function NavBar() {
         </NavigationMenuList>
       </NavigationMenu>
 
-      {/*MARK: Mobile Menu */}
+      {/*MARK: Mobile Menu 
+      */}
 
       <div className="lg:hidden">
         <Sheet>
           <SheetTrigger>
-            <AlignJustify className="cursor-pointer text-white" />
+            <AlignJustify className="cursor-pointer text-white mr-4"/>
           </SheetTrigger>
           <SheetContent className="bg-primaryBg w-full">
             <div className="flex flex-col items-center justify-between h-full py-8">
-              <div className="flex flex-col items-center justify-between gap-y-20">
+              <div className="flex flex-col items-center justify-between gap-y-10 md:gap-y-20">
                 <SheetClose asChild>
                   <Link href="/">
                     <Image
@@ -214,7 +215,7 @@ export default function NavBar() {
                             animate={{ y: 0 }}
                             transition={{ type: "tween" }}
                             layoutId="underline"
-                            className="absolute left-0 top-full h-[2px]  bg-goldTxt w-full mt-1"
+                            className="absolute left-0 top-full h-[2px] bg-goldTxt w-full mt-1"
                           />
                         )}
                         {navlink.name}
@@ -225,7 +226,7 @@ export default function NavBar() {
               </div>
 
               <SheetClose asChild>
-              <Socials MyClassName="text-4xl text-orange-500 hover:text-orange-100 transition-all"/>
+              <Socials MyClassName="text-4xl pb-10 text-orange-500 hover:text-orange-100 transition-all"/>
               </SheetClose>
             </div>
           </SheetContent>
