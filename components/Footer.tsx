@@ -5,11 +5,13 @@ import { FaXTwitter } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
 import { FaLinkedin } from "react-icons/fa6";
 import footerLinks from "./footer-data";
+import { usePathname } from "next/navigation";
 
 const date = new Date();
 const year = date.getFullYear();
 
 export default function Footer() {
+  const pathname = usePathname();
   return (
     <div className="flex flex-col">
 
