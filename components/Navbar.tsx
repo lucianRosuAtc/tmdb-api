@@ -31,29 +31,24 @@ import Socials from "./Socials";
 export default function NavBar() {
   const pathname = usePathname();
   return (
-    <div className="flex justify-between lg:justify-center items-center gap-10 h-20 bg-primaryBg sticky top-0 z-50 px-4 lg:px-10 ">
+    <div className="flex justify-between lg:justify-center items-center gap-10 h-20 bg-primaryBg border-b border-orange-500 shadow-xl sticky top-0 z-50 px-4 lg:px-10 ">
       <div className="">
+      <Link
+              href="/">
         <Image
           src="/img/logo/blue_square_1.svg"
           alt="TMDB"
           width={100}
           height={100}
           className="md:ml-10 absolute top-4 left-4"
-        />
+          />
+          </Link>
       </div>
 
       <NavigationMenu className="hidden lg:flex">
         <NavigationMenuList className="gap-10">
-          <NavigationMenuItem>
-            <Link
-              href="/"
-              className="bg-white text-black text-sm font-medium p-3 rounded-md"
-            >
-              All Movies & Tv
-            </Link>
-          </NavigationMenuItem>
-
-          <NavigationMenuItem>
+  
+          <NavigationMenuItem className="border-2 border-primary hover:border-orange-500 rounded-lg">
             <NavigationMenuTrigger>Movies</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -109,9 +104,10 @@ export default function NavBar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
 
-          {/* //////////  TV SHOWS  ///////////// */}
+          {/* MARK: TV SHOWS 
+           */}
 
-          <NavigationMenuItem>
+          <NavigationMenuItem className="border-2 border-primary hover:border-orange-500 rounded-lg">
             <NavigationMenuTrigger>Tv Shows</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -167,13 +163,14 @@ export default function NavBar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
 
-          {/* Contact  */}
-          <NavigationMenuItem>
+          {/*MARK: Contact
+          */}
+          <NavigationMenuItem className="border-2 border-primary hover:border-orange-500 rounded-lg">
             <NavigationMenuTrigger>Contact Us</NavigationMenuTrigger>
             <NavigationMenuContent className="">
               <ul className="grid gap-3 p-6 md:w-[200px] lg:w-[500px]  ">
-                <div className="flex flex-col justify-start items-center py-2 border border-white bg-slate-100 rounded-md hover:text-goldTxt">
-                  <div className="text-2xl text-goldTxt md:mb-6">Contact Us</div>
+                <div className="flex flex-col justify-start items-center py-2 border border-white bg-slate-100 rounded-md hover:border-orange-500">
+                  <div className="text-2xl text-orange-500 md:mb-6">Contact Us</div>
                   <Socials MyClassName="text-4xl text-orange-500 hover:text-primary transition-all"/>
                 </div>
               </ul>
@@ -182,16 +179,17 @@ export default function NavBar() {
         </NavigationMenuList>
       </NavigationMenu>
 
-      {/*MARK: Mobile Menu */}
+      {/*MARK: Mobile Menu 
+      */}
 
       <div className="lg:hidden">
         <Sheet>
           <SheetTrigger>
-            <AlignJustify className="cursor-pointer text-white" />
+            <AlignJustify className="cursor-pointer text-white mr-4"/>
           </SheetTrigger>
           <SheetContent className="bg-primaryBg w-full">
             <div className="flex flex-col items-center justify-between h-full py-8">
-              <div className="flex flex-col items-center justify-between gap-y-20">
+              <div className="flex flex-col items-center justify-between gap-y-10 md:gap-y-20">
                 <SheetClose asChild>
                   <Link href="/">
                     <Image
@@ -217,7 +215,7 @@ export default function NavBar() {
                             animate={{ y: 0 }}
                             transition={{ type: "tween" }}
                             layoutId="underline"
-                            className="absolute left-0 top-full h-[2px]  bg-goldTxt w-full mt-1"
+                            className="absolute left-0 top-full h-[2px] bg-goldTxt w-full mt-1"
                           />
                         )}
                         {navlink.name}
@@ -228,7 +226,7 @@ export default function NavBar() {
               </div>
 
               <SheetClose asChild>
-              <Socials MyClassName="text-4xl text-orange-500 hover:text-orange-100 transition-all"/>
+              <Socials MyClassName="text-4xl pb-10 text-orange-500 hover:text-orange-100 transition-all"/>
               </SheetClose>
             </div>
           </SheetContent>
