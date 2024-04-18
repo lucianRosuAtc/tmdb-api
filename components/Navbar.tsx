@@ -184,7 +184,7 @@ export default function NavBar() {
 
       <div className="lg:hidden">
         <Sheet>
-          <SheetTrigger className="mr-4 border">
+          <SheetTrigger className="mr-4">
             <AlignJustify className="cursor-pointer text-white "/>
           </SheetTrigger>
           <SheetContent className="bg-primaryBg w-full">
