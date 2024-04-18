@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
@@ -11,9 +12,6 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import Image from "next/image";
-import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
-import { TfiEmail } from "react-icons/tfi";
 
 import {
   Sheet,
@@ -24,8 +22,11 @@ import {
 import { AlignJustify } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { navigationlinks } from "./social-data";
-import { social } from "./social-data";
+import { navigationlinks } from "./(link-data)/social-data";
+import Socials from "./Socials";
+
+
+
 
 export default function NavBar() {
   const pathname = usePathname();
@@ -48,7 +49,7 @@ export default function NavBar() {
               href="/"
               className="bg-white text-black text-sm font-medium p-3 rounded-md"
             >
-              Movies & Tv
+              All Movies & Tv
             </Link>
           </NavigationMenuItem>
 
@@ -171,34 +172,9 @@ export default function NavBar() {
             <NavigationMenuTrigger>Contact Us</NavigationMenuTrigger>
             <NavigationMenuContent className="">
               <ul className="grid gap-3 p-6 md:w-[200px] lg:w-[500px]  ">
-                <div className="flex flex-col justify-start items-center py-2 border border-white bg-slate-100 rounded-md hover:border-orange-500">
-                  <div className="text-goldTxt md:mb-6">Contact Us</div>
-                  <div className="flex  justify-center items-center text-goldTxt">
-                    <Link
-                      href="https://twitter.com/LucianRosuATC"
-                      target="_blank"
-                      className="p-3 hover:text-orange-500 flex select-none flex-col justify-center rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted no-underline outline-none focus:shadow-lg
-                      border border-slate-100 hover:border-orange-500"
-                    >
-                      <FaXTwitter className="h-10 w-10" />
-                    </Link>
-                    <a
-                      href="mailto:lucian.atc@gmail.com"
-                      target="_blank"
-                      className="p-3 mx-5 hover:text-orange-500 flex select-none flex-col justify-center rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted no-underline outline-none focus:shadow-lg
-                      border border-slate-100 hover:border-orange-500"
-                    >
-                      <TfiEmail className="h-10 w-10" />
-                    </a>
-                    <Link
-                      href="https://www.linkedin.com/in/lucian-rosu-atc//"
-                      target="_blank"
-                      className="p-3  hover:text-orange-500 flex select-none flex-col justify-center rounded-md hover:bg-gradient-to-b hover:from-muted/80 hover:to-muted no-underline outline-none focus:shadow-lg
-                      border border-slate-100 hover:border-orange-500"
-                    >
-                      <FaLinkedin className="h-10 w-10" />
-                    </Link>
-                  </div>
+                <div className="flex flex-col justify-start items-center py-2 border border-white bg-slate-100 rounded-md hover:text-goldTxt">
+                  <div className="text-2xl text-goldTxt md:mb-6">Contact Us</div>
+                  <Socials MyClassName="text-4xl text-orange-500 hover:text-primary transition-all"/>
                 </div>
               </ul>
             </NavigationMenuContent>
@@ -252,18 +228,7 @@ export default function NavBar() {
               </div>
 
               <SheetClose asChild>
-                <div className="flex gap-x-8">
-                  {social.map((item, index) => (
-                    <a
-                      href={item.url}
-                      key={index}
-                      target="_blank"
-                      className="text-4xl text-orange-500 hover:text-orange-100 transition-all"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
+              <Socials MyClassName="text-4xl text-orange-500 hover:text-orange-100 transition-all"/>
               </SheetClose>
             </div>
           </SheetContent>

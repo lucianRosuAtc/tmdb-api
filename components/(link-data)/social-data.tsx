@@ -1,7 +1,7 @@
 
 // MARK: NAVIGATION LINKS
 export const navigationlinks = [
-    { url: "/", name: "Movies & Tv" },
+    { url: "/", name: "All Movies & Tv" },
     { url: "/Movies", name: "New Movies" },
     { url: "/MovieOfTheDay", name: "Movie Of The Day" },
     { url: "/MovieOfTheWeek", name: "Movie Of The Week" },
@@ -14,18 +14,18 @@ export const navigationlinks = [
 
 
 // MARK: SOCIAL DATA
-import { RiLinkedinFill, RiGithubFill } from "react-icons/ri";
+import { RiLinkedinFill } from "react-icons/ri";
 import { TfiEmail } from "react-icons/tfi";
 import { FaXTwitter } from "react-icons/fa6";
 
 export const social = [
     {
-        url: "https://www.linkedin.com/feed/?trk=nav_back_to_linkedin",
-        name: <RiLinkedinFill />,
-    },
-    {
         url: "mailto:lucian.rosu.atc@gmail.com",
         name: <TfiEmail />,
+    },
+    {
+        url: "https://www.linkedin.com/feed/?trk=nav_back_to_linkedin",
+        name: <RiLinkedinFill />,
     },
     {
         url: "https://twitter.com/LucianRosuATC",

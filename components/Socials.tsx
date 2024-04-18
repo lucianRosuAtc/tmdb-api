@@ -1,14 +1,18 @@
-import { social } from "./social-data";
+import { social } from "./(link-data)/social-data";
 
-export default function Socials() {
+
+interface SocialsProps{
+  MyClassName: string;
+}
+export default function Socials({MyClassName}: SocialsProps) {
   return (
-    <div className="flex gap-x-7 mx-auto xl:mx-0">
+    <div className="flex gap-x-8 mx-auto xl:mx-0">
       {social.map((item, index) => (
         <a
           href={item.url}
           key={index}
           target="_blank"
-          className="text-foreground text-3xl hover:text-primary transition-all"
+          className={MyClassName}
         >
           {item.name}
         </a>
