@@ -122,8 +122,8 @@ export default function Footer() {
   return (
     <div className="flex flex-col">
 
-    <div className="grid grid-cols-1 md:grid-cols-3  border-t-2 border-goldTxt pt-6  md:pt-0">
-      <div className="flex justify-center items-center">
+    <div className="grid grid-cols-1 md:grid-cols-3 border-t-2 border-goldTxt pt-6  md:pt-0">
+      <div className="flex justify-center items-center border">
         <Link
           className="flex justify-center items-center rounded-md py-2 px-2 focus:shadow-lg hover:bg-gray-700 hover:text-goldTxt border-b border-b-transparent hover:border-b-goldTxt"
           href="/"
@@ -139,10 +139,10 @@ export default function Footer() {
       </div>
           {/* MARK: navigation links
            */}
-          <div className="flex gap-x-8 items-center">
+          <div className="grid md:grid-cols-3 justify-center gap-x-8 gap-y-3 items-center border">
             {footerLinks.map((link) => (
               <Link
-                className="relative hover:text-primary transition-all text-orange-100"
+                className="relative hover:text-orange-500 transition-all text-orange-100"
                 key={link.footerLink}
                 href={link.footerLink}
               >
@@ -152,7 +152,7 @@ export default function Footer() {
                     animate={{ y: 0 }}
                     transition={{ type: "tween" }}
                     layoutId="underline"
-                    className="absolute left-0 top-full h-[2px] bg-primary w-full mt-1"
+                    className="absolute left-0 top-full h-[2px] bg-orange-500 w-full mt-1"
                   />
                 )}
                 {link.footerLinkName}
@@ -163,8 +163,8 @@ export default function Footer() {
           {/* MARK: social media links 
           */}
        
-              <div className="flex flex-col justify-start items-center gap-x-8 mb-4 md:py-10">
-            <div className="text-goldTxt mb-2 md:mb-6">CONTACT US</div>
+              <div className="flex flex-col justify-start items-center border mb-4 md:py-10">
+            <div className="md:text-xl text-orange-500 mb-2 md:mb-6">CONTACT US</div>
 
             <Socials MyClassName="text-4xl text-orange-500 hover:text-orange-100 transition-all"/>
           </div>
@@ -172,7 +172,7 @@ export default function Footer() {
 
       {/* Date  */}
       <div className="flex justify-center px-4 text-white pt-3 pb-6">
-        <p className="text-sm md:text-sm"><span className="pr-1">&copy;</span> {`${year} Lucian Dev, All rights reserved.`} </p>
+        <p className="text-sm md:text-sm"><span className="pr-1">&copy;</span> {`${year} TMDB-API-Learning, All rights reserved. Developed by Lucian Dev`} </p>
       </div>
     </div>
   );
