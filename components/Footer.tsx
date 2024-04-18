@@ -32,10 +32,10 @@ export default function Footer() {
       </div>
           {/* MARK: Navigation Links
            */}
-          <div className="grid sm:grid-cols-2 xl:grid-cols-3 px-8 justify-center mx-auto gap-x-7 gap-y-4 md:gap-y-0 items-center py-5 md:py-0">
+          <div className="grid sm:grid-cols-2 xl:grid-cols-3 px-8 justify-center mx-auto gap-x-7 gap-y-4 md:gap-y-0 items-center pt-5 pb-10">
             {footerLinks.map((link) => (
               <Link
-                className="relative hover:text-orange-500 transition-all text-orange-100 text-sm lg:text-base border"
+                className="relative hover:text-orange-500 transition-all text-orange-100 text-sm lg:text-base"
                 key={link.footerLink}
                 href={link.footerLink}
               >
@@ -45,7 +45,7 @@ export default function Footer() {
                     animate={{ y: 0 }}
                     transition={{ type: "tween" }}
                     layoutId="underline"
-                    className="absolute left-0 top-full h-[2px] bg-orange-500 w-5/6  mt-1"
+                    className="absolute left-0 top-full h-[2px] bg-orange-500 w-5/6 mt-1"
                   />
                 )}
                 {link.footerLinkName}
@@ -65,7 +65,7 @@ export default function Footer() {
 
       {/* Date  */}
       <div className="flex justify-center px-8 text-white pt-3 pb-12">
-        <p className="text-sm md:text-sm"><span className="pr-1">&copy;</span> {`${year} TMDB-API-Learning, All rights reserved. Developed by Lucian Dev`} </p>
+        <p className="text-sm text-center"><span className="pr-1">&copy;</span> {`${year} TMDB-API, All rights reserved. Developed by Lucian Dev`} </p>
       </div>
     </div>
   );
