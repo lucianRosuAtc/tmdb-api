@@ -35,7 +35,7 @@ export default function Footer() {
           <div className="grid sm:grid-cols-2 xl:grid-cols-3 px-8 justify-center mx-auto gap-x-7 gap-y-4 md:gap-y-0 items-center py-5 md:py-0">
             {footerLinks.map((link) => (
               <Link
-                className="relative hover:text-orange-500 transition-all text-orange-100 text-sm lg:text-base"
+                className="relative hover:text-orange-500 transition-all text-orange-100 text-sm lg:text-base border"
                 key={link.footerLink}
                 href={link.footerLink}
               >
@@ -57,7 +57,7 @@ export default function Footer() {
           */}
        
               <div className="flex flex-col justify-start items-center mb-4 md:py-10">
-            <div className="md:text-xl text-orange-500 mb-2 md:mb-6">CONTACT US</div>
+            <div className="text-xl text-orange-500 mb-4 md:mb-6">CONTACT US</div>
 
             <Socials MyClassName="text-4xl text-orange-500 hover:text-orange-100 transition-all"/>
           </div>

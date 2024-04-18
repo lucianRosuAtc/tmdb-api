@@ -170,7 +170,7 @@ export default function NavBar() {
             <NavigationMenuContent className="">
               <ul className="grid gap-3 p-6 md:w-[200px] lg:w-[500px]  ">
                 <div className="flex flex-col justify-start items-center py-2 border border-white bg-slate-100 rounded-md hover:border-orange-500">
-                  <div className="text-2xl text-orange-500 md:mb-6">Contact Us</div>
+                  <div className="text-2xl font-semibold text-orange-500 md:mb-6">Contact Us</div>
                   <Socials MyClassName="text-4xl text-orange-500 hover:text-primary transition-all"/>
                 </div>
               </ul>
