@@ -64,8 +64,8 @@ export default function Footer() {
       {/* Date  */}
       <div className="flex justify-center px-8 text-white pt-3 pb-12">
         <p className="text-sm text-center">
-          <span className="pr-1">&copy;</span>{" "}
-          {`${year} TMDB-API, All rights reserved. Developed by Lucian Dev`}{" "}
+        <span className="pr-1">&copy;</span>
+        {`${year}`}<Link href="https://www.lucianrosu.com/" className='hover:text-primary font-bold'> Lucian Dev</Link>, All rights reserved.
         </p>
       </div>
     </div>
