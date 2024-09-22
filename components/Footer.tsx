@@ -65,7 +65,7 @@ export default function Footer() {
       <div className="flex justify-center px-8 text-white pt-3 pb-12">
         <p className="text-sm text-center">
         <span className="pr-1">&copy;</span>
-        {`${year}`}<Link href="https://www.lucianrosu.com/" className='hover:text-primary font-bold'> Lucian Dev</Link>, All rights reserved.
+        {`${year}`}<Link href="https://www.lucianrosu.com/" className='hover:text-orange-500 font-bold'> Lucian Dev</Link>, All rights reserved.
         </p>
       </div>
     </div>
